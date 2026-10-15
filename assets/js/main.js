@@ -228,26 +228,27 @@
 
   /* ---------- Colour palette preview (only with ?preview or ?palette=) ---------- */
   var PALETTES = [
+    { id: 'indigo',     name: 'Midnight Indigo',   a: '#2f4fa3', b: '#162d68' }, /* default */
     { id: 'teal',       name: 'River Teal',        a: '#0b6e84', b: '#08485a' },
     { id: 'forest',     name: 'Forest Green',      a: '#2b6b45', b: '#15402a' },
-    { id: 'indigo',     name: 'Midnight Indigo',   a: '#2f4fa3', b: '#162d68' },
     { id: 'terracotta', name: 'Terracotta Earth',  a: '#a84a22', b: '#5e2610' },
     { id: 'burgundy',   name: 'Burgundy Academic', a: '#8a2c3c', b: '#3b1823' }
   ];
+  var DEFAULT_PALETTE = 'indigo';
   var params = new URLSearchParams(window.location.search);
   if (params.has('preview') || params.has('palette')) {
     var panel = document.createElement('aside'); /* a landmark, so assistive tech can find it */
     panel.className = 'palette-picker';
     panel.setAttribute('aria-labelledby', 'pp-title');
     panel.innerHTML = '<h2 id="pp-title">Colour options</h2>';
-    var current = root.getAttribute('data-palette') || 'teal';
+    var current = root.getAttribute('data-palette') || DEFAULT_PALETTE;
     var buttons = PALETTES.map(function (p) {
       var b = document.createElement('button');
       b.type = 'button';
       b.setAttribute('data-palette', p.id);
       b.innerHTML = '<span class="sw" style="background:linear-gradient(135deg,' + p.a + ' 50%,' + p.b + ' 50%)"></span><span>' + p.name + '</span>';
       b.addEventListener('click', function () {
-        if (p.id === 'teal') root.removeAttribute('data-palette'); else root.setAttribute('data-palette', p.id);
+        if (p.id === DEFAULT_PALETTE) root.removeAttribute('data-palette'); else root.setAttribute('data-palette', p.id);
         buttons.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
         try {
           var u = new URL(window.location.href);
