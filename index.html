@@ -23,8 +23,13 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
   <script>
-    /* Apply the saved theme before first paint to avoid a flash. */
-    try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    /* Runs before first paint: marks JS as available, applies the saved theme and an optional ?palette= preview. */
+    (function () {
+      var r = document.documentElement;
+      r.className += ' js';
+      try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') r.setAttribute('data-theme', t); } catch (e) {}
+      try { var p = new URLSearchParams(location.search).get('palette'); if (/^(teal|forest|indigo|terracotta|burgundy)$/.test(p)) r.setAttribute('data-palette', p); } catch (e) {}
+    })();
   </script>
 
   <script type="application/ld+json">
@@ -53,101 +58,103 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Mobile top bar -->
-  <header class="mobile-bar">
-    <a href="#home" class="mobile-brand">Srija Roy<span>Remote sensing · GIS · Hydrology</span></a>
-    <div class="mobile-actions">
-      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
-      </button>
-      <button class="icon-btn menu-btn" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
+  <!-- Top navigation bar -->
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <a href="#home" class="brand">Srija Roy<small>Remote sensing · GIS · Hydrology</small></a>
+
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#research">Research</a>
+        <a class="nav-link" href="#publications">Publications</a>
+        <a class="nav-link" href="#tools">Tools &amp; apps</a>
+        <div class="more">
+          <button class="nav-link more-btn" type="button" aria-expanded="false" aria-controls="more-list">More
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="more-list" id="more-list">
+            <li><a class="nav-link" href="#awards">Awards</a></li>
+            <li><a class="nav-link" href="#certifications">Certifications</a></li>
+            <li><a class="nav-link" href="#engagement">Engagement</a></li>
+          </ul>
+        </div>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
     </div>
   </header>
-  <div class="backdrop" hidden></div>
-
-  <aside id="sidebar" class="sidebar" aria-label="Profile and navigation">
-    <a href="#home" class="profile" aria-label="Srija Roy, back to top">
-      <span class="avatar"><img src="assets/img/portrait.webp" alt="" width="900" height="655"></span>
-      <span class="profile-name">Dr. Srija Roy</span>
-    </a>
-    <p class="profile-role">Research Associate II</p>
-    <p class="profile-org">Indian Institute of Technology, Indore</p>
-    <p class="profile-badge">Ph.D., NIT Jamshedpur</p>
-
-    <nav class="nav" aria-label="Main">
-      <a class="nav-link" href="#home">Home</a>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#education">Education</a>
-      <a class="nav-link" href="#experience">Experience</a>
-      <a class="nav-link" href="#research">Research</a>
-      <a class="nav-link" href="#publications">Publications</a>
-      <a class="nav-link" href="#tools">Tools &amp; apps</a>
-      <a class="nav-link" href="#awards">Awards</a>
-      <a class="nav-link" href="#certifications">Certifications</a>
-      <a class="nav-link" href="#engagement">Engagement</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </nav>
-
-    <div class="side-links">
-      <a href="https://github.com/roysrija" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/srija-roy-746bb9100" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://www.researchgate.net/profile/Srija-Roy-3" target="_blank" rel="noopener noreferrer">ResearchGate</a>
-    </div>
-    <button class="theme-toggle side-theme" type="button" aria-label="Switch to dark theme">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
-      <span class="theme-label">Dark theme</span>
-    </button>
-  </aside>
 
   <main id="main">
     <!-- HOME -->
-    <section id="home" class="hero-wrap" aria-labelledby="hero-title">
+    <section id="home" aria-labelledby="hero-title">
       <div class="hero">
-        <div class="hero-inner">
-          <p class="eyebrow light">Remote sensing · GIS · Hydrology</p>
-          <h1 id="hero-title">Dr. Srija Roy</h1>
-          <p class="hero-sub">Research Associate II, Narmada River Basin Management Studies<br>Indian Institute of Technology, Indore</p>
-          <p class="hero-fund">Project funded by the Ministry of Jal Shakti, National River Conservation Directorate, Government of India</p>
-          <div class="btn-row">
-            <a class="btn btn-light" href="#research">Explore my research</a>
-            <a class="btn btn-ghost" href="#publications">Publications</a>
-            <a class="btn btn-ghost" href="#contact">Contact</a>
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow light">Remote sensing · GIS · Hydrology</p>
+            <h1 id="hero-title">Dr. Srija Roy</h1>
+            <p class="hero-sub">Research Associate II, Narmada River Basin Management Studies<br>Indian Institute of Technology, Indore</p>
+            <p class="hero-badge">Ph.D., NIT Jamshedpur</p>
+            <p class="hero-fund">Project funded by the Ministry of Jal Shakti, National River Conservation Directorate, Government of India</p>
+            <div class="btn-row">
+              <a class="btn btn-light" href="#research">Explore my research</a>
+              <a class="btn btn-ghost" href="#publications">Publications</a>
+              <a class="btn btn-ghost" href="#contact">Contact</a>
+            </div>
+            <p class="hero-links">
+              <a href="https://github.com/roysrija" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/srija-roy-746bb9100" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.researchgate.net/profile/Srija-Roy-3" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+            </p>
           </div>
+          <figure class="hero-photo">
+            <img src="assets/img/portrait.webp" alt="Dr. Srija Roy standing at a mountain viewpoint" width="900" height="655" fetchpriority="high">
+          </figure>
         </div>
       </div>
 
-      <ul class="highlights">
-        <li>
-          <a class="highlight" href="#research">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
-            <h2>Remote sensing &amp; GIS</h2>
-            <p>Satellite data, Google Earth Engine and geospatial tools</p>
-          </a>
-        </li>
-        <li>
-          <a class="highlight" href="#research">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8c3-3 6 3 9 0s6 3 9 0M3 13c3-3 6 3 9 0s6 3 9 0M3 18c3-3 6 3 9 0s6 3 9 0"/></svg>
-            <h2>River basin science</h2>
-            <p>Hydrology, geomorphology and hydrogeology</p>
-          </a>
-        </li>
-        <li>
-          <a class="highlight" href="#research">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5zM3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg>
-            <h2>Erosion &amp; land change</h2>
-            <p>River bank erosion, soil erosion and LULC dynamics</p>
-          </a>
-        </li>
-        <li>
-          <a class="highlight" href="#research">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 6h7M7.2 8.2l3.7 7.6M16.8 8.2l-3.7 7.6"/></svg>
-            <h2>AI for geospatial data</h2>
-            <p>Machine learning for environmental modelling</p>
-          </a>
-        </li>
-      </ul>
+      <div class="wrap highlights-wrap">
+        <ul class="highlights">
+          <li>
+            <a class="highlight" href="#research">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+              <h2>Remote sensing &amp; GIS</h2>
+              <p>Satellite data, Google Earth Engine and geospatial tools</p>
+            </a>
+          </li>
+          <li>
+            <a class="highlight" href="#research">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8c3-3 6 3 9 0s6 3 9 0M3 13c3-3 6 3 9 0s6 3 9 0M3 18c3-3 6 3 9 0s6 3 9 0"/></svg>
+              <h2>River basin science</h2>
+              <p>Hydrology, geomorphology and hydrogeology</p>
+            </a>
+          </li>
+          <li>
+            <a class="highlight" href="#research">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5zM3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg>
+              <h2>Erosion &amp; land change</h2>
+              <p>River bank erosion, soil erosion and LULC dynamics</p>
+            </a>
+          </li>
+          <li>
+            <a class="highlight" href="#research">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 6h7M7.2 8.2l3.7 7.6M16.8 8.2l-3.7 7.6"/></svg>
+              <h2>AI for geospatial data</h2>
+              <p>Machine learning for environmental modelling</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <div class="content">

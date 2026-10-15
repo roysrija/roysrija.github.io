@@ -9,8 +9,8 @@ It is a plain static site (HTML, CSS and a little JavaScript). There is no build
 ```
 index.html            all content, one section per nav item
 404.html              not-found page
-assets/css/style.css  design tokens (colours, spacing) at the top, then components
-assets/js/main.js     theme toggle, mobile menu, scroll-spy, publication filter, image viewer
+assets/css/style.css  colour palettes and design tokens at the top, then components
+assets/js/main.js     theme toggle, top-bar menu, scroll-spy, publication filter, image viewer
 assets/img/           optimised WebP images (portrait, research figures, gallery)
 robots.txt, sitemap.xml
 ```
@@ -29,7 +29,8 @@ python3 -m http.server 8000
 - **Add a publication:** copy an `<article class="pub" ...>` block in `index.html`. Set `data-type` to `journal`, `conference` or `review`, and set `data-year`. The filter and the item count update automatically.
 - **Add a tool or app link:** in the `#tools` section, add `<a class="btn btn-small" href="...">Open app</a>` inside the tool's `<article>` (see the existing GitHub buttons). A `TODO` comment marks the spot.
 - **Add a gallery photo:** save a WebP (about 1000 px wide) in `assets/img/gallery/`, then copy a `<figure>` block in `#engagement`. Always write a descriptive `alt` text and set `width` and `height`.
-- **Change colours:** edit the variables in `:root` (light) and `:root[data-theme="dark"]` at the top of `style.css`.
+- **Change colours:** the site ships with five ready-made palettes (`teal`, `forest`, `indigo`, `terracotta`, `burgundy`) at the top of `style.css`. River Teal is the default. To switch, set `data-palette="forest"` (or another name) on the `<html>` tag in `index.html`. To try them first, open the site with `?preview` added to the address (for example `https://roysrija.github.io/?preview`), which shows a small panel for switching palettes. Each palette defines light values (`--p*`), dark values (`--d-*`) and hero gradient stops (`--h1`–`--h3`).
+- **Add or reorder a navigation item:** edit the `<nav class="nav">` block in `index.html` (the `More` dropdown holds the last-priority items) and give the matching `<section>` the same `id`.
 - **Update "Last updated":** edit the footer in `index.html` and `lastmod` in `sitemap.xml`.
 
 ## Deploy
