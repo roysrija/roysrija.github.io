@@ -30,7 +30,7 @@
     var meta = $('meta[name="theme-color"]');
     if (meta) {
       var cs = getComputedStyle(root);
-      var c = (cs.getPropertyValue(dark ? '--d-bg' : '--h2') || '').trim();
+      var c = (cs.getPropertyValue('--bar') || '').trim();
       if (c) meta.setAttribute('content', c);
     }
   }
