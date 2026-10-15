@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Srija Roy | Remote Sensing, GIS &amp; River Basin Hydrology</title>
+  <meta name="description" content="Dr. Srija Roy is a Research Associate at IIT Indore working on remote sensing, GIS, hydrology, geomorphology and machine learning for river basin management.">
+  <meta name="author" content="Srija Roy">
+  <meta name="theme-color" content="#08485a">
+  <link rel="canonical" href="https://roysrija.github.io/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Srija Roy">
+  <meta property="og:title" content="Dr. Srija Roy | Remote Sensing, GIS &amp; River Basin Hydrology">
+  <meta property="og:description" content="Research on river basins, erosion, land change and machine learning for geospatial analysis.">
+  <meta property="og:url" content="https://roysrija.github.io/">
+  <meta property="og:image" content="https://roysrija.github.io/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portrait of Dr. Srija Roy in the mountains">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Apply the saved theme before first paint to avoid a flash. */
+    try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Srija Roy",
+    "honorificPrefix": "Dr.",
+    "jobTitle": "Research Associate II",
+    "url": "https://roysrija.github.io/",
+    "image": "https://roysrija.github.io/assets/img/portrait.webp",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Indore" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "National Institute of Technology Jamshedpur" },
+      { "@type": "CollegeOrUniversity", "name": "National Institute of Technology Manipur" }
+    ],
+    "knowsAbout": ["Remote sensing", "GIS", "Hydrology", "Geomorphology", "Hydrogeology", "Machine learning for geospatial analysis"],
+    "sameAs": [
+      "https://github.com/roysrija",
+      "https://www.linkedin.com/in/srija-roy-746bb9100",
+      "https://www.researchgate.net/profile/Srija-Roy-3"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Mobile top bar -->
+  <header class="mobile-bar">
+    <a href="#home" class="mobile-brand">Srija Roy<span>Remote sensing · GIS · Hydrology</span></a>
+    <div class="mobile-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="backdrop" hidden></div>
+
+  <aside id="sidebar" class="sidebar" aria-label="Profile and navigation">
+    <a href="#home" class="profile" aria-label="Srija Roy, back to top">
+      <span class="avatar"><img src="assets/img/portrait.webp" alt="" width="900" height="655"></span>
+      <span class="profile-name">Dr. Srija Roy</span>
+    </a>
+    <p class="profile-role">Research Associate II</p>
+    <p class="profile-org">Indian Institute of Technology, Indore</p>
+    <p class="profile-badge">Ph.D., NIT Jamshedpur</p>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#education">Education</a>
+      <a class="nav-link" href="#experience">Experience</a>
+      <a class="nav-link" href="#research">Research</a>
+      <a class="nav-link" href="#publications">Publications</a>
+      <a class="nav-link" href="#tools">Tools &amp; apps</a>
+      <a class="nav-link" href="#awards">Awards</a>
+      <a class="nav-link" href="#certifications">Certifications</a>
+      <a class="nav-link" href="#engagement">Engagement</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+
+    <div class="side-links">
+      <a href="https://github.com/roysrija" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/srija-roy-746bb9100" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.researchgate.net/profile/Srija-Roy-3" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+    </div>
+    <button class="theme-toggle side-theme" type="button" aria-label="Switch to dark theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      <span class="theme-label">Dark theme</span>
+    </button>
+  </aside>
+
+  <main id="main">
+    <!-- HOME -->
+    <section id="home" class="hero-wrap" aria-labelledby="hero-title">
+      <div class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow light">Remote sensing · GIS · Hydrology</p>
+          <h1 id="hero-title">Dr. Srija Roy</h1>
+          <p class="hero-sub">Research Associate II, Narmada River Basin Management Studies<br>Indian Institute of Technology, Indore</p>
+          <p class="hero-fund">Project funded by the Ministry of Jal Shakti, National River Conservation Directorate, Government of India</p>
+          <div class="btn-row">
+            <a class="btn btn-light" href="#research">Explore my research</a>
+            <a class="btn btn-ghost" href="#publications">Publications</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="highlights">
+        <li>
+          <a class="highlight" href="#research">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+            <h2>Remote sensing &amp; GIS</h2>
+            <p>Satellite data, Google Earth Engine and geospatial tools</p>
+          </a>
+        </li>
+        <li>
+          <a class="highlight" href="#research">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8c3-3 6 3 9 0s6 3 9 0M3 13c3-3 6 3 9 0s6 3 9 0M3 18c3-3 6 3 9 0s6 3 9 0"/></svg>
+            <h2>River basin science</h2>
+            <p>Hydrology, geomorphology and hydrogeology</p>
+          </a>
+        </li>
+        <li>
+          <a class="highlight" href="#research">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5zM3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg>
+            <h2>Erosion &amp; land change</h2>
+            <p>River bank erosion, soil erosion and LULC dynamics</p>
+          </a>
+        </li>
+        <li>
+          <a class="highlight" href="#research">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 6h7M7.2 8.2l3.7 7.6M16.8 8.2l-3.7 7.6"/></svg>
+            <h2>AI for geospatial data</h2>
+            <p>Machine learning for environmental modelling</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="content">
+      <!-- ABOUT -->
+      <section id="about" class="section" aria-labelledby="about-h">
+        <p class="eyebrow">About</p>
+        <h2 id="about-h" class="section-title">About me</h2>
+        <div class="about-grid">
+          <div class="prose">
+            <p>Hello there! I am Srija, a researcher with a Ph.D. in Environmental and Water Resources Engineering from the National Institute of Technology, Jamshedpur, India. I currently work as a Postdoctoral Research Associate on the <em>Narmada River Basin Management Studies</em>, a key project under the National River Conservation Plan funded by the Ministry of Jal Shakti, Government of India, at IIT Indore.</p>
+            <p>My research interests span remote sensing and GIS, geomorphology, hydrology and hydrogeology under changing climatic conditions. I enjoy applying remote sensing and GIS across a wide range of fields, from ecology, species mapping and biodiversity analysis to logistics route optimisation and healthcare infrastructure planning. I am also passionate about using machine learning (ML) and artificial intelligence (AI) for geospatial analysis and modelling. Integrating AI with geospatial science improves our ability to process complex datasets, identify patterns and run predictive analyses, which opens new avenues for understanding environmental dynamics, optimising water resource management and building solutions for environmental conservation. My aim is to contribute to data-driven strategies that promote sustainable development and environmental stewardship.</p>
+            <p>Inspired by the teachings of Dr. A.P.J. Abdul Kalam, I believe that education is the key to unlocking one's potential. His vision resonates with my commitment to women's empowerment and education. I strive to promote equal opportunities for all, because empowering individuals through education is essential for both personal and societal progress.</p>
+            <p>Through this website I share my insights, research and experiences with fellow researchers and enthusiasts. My goal is to build a community where we can learn, grow and collaborate towards a better, more sustainable future. Thank you for visiting. I look forward to connecting with you!</p>
+          </div>
+          <div class="about-side">
+            <h3 class="mini-title">Research interests</h3>
+            <ul class="check-list">
+              <li>Remote sensing and GIS</li>
+              <li>Hydrological modelling</li>
+              <li>Geomorphology</li>
+              <li>Hydrogeology</li>
+              <li>Machine learning for geospatial analysis and modelling</li>
+              <li>Natural disaster monitoring and prediction</li>
+              <li>Climate change impact assessment</li>
+              <li>Air quality modelling</li>
+              <li>Geospatial health analytics</li>
+            </ul>
+            <h3 class="mini-title">Technical skillset</h3>
+            <ul class="chips">
+              <li>ArcGIS</li><li>QGIS</li><li>Google Earth Engine</li><li>Python</li><li>ERDAS IMAGINE</li><li>SWAT</li><li>HEC-RAS</li><li>GeoDa</li><li>MaxEnt</li><li>Fragstats</li><li>Visual Studio</li><li>MS Visio</li>
+            </ul>
+          </div>
+        </div>
+        <figure class="banner">
+          <img src="assets/img/river-banner.webp" alt="Aerial view of a river winding through dense green forest" width="1200" height="199" loading="lazy">
+        </figure>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="section" aria-labelledby="edu-h">
+        <p class="eyebrow">Education</p>
+        <h2 id="edu-h" class="section-title">Academic record</h2>
+        <ol class="timeline">
+          <li>
+            <span class="period">2018 – 2024</span>
+            <h3>Doctor of Philosophy, Environmental and Water Resources Engineering</h3>
+            <p class="place"><a href="https://www.nitjsr.ac.in/departments/civil" target="_blank" rel="noopener noreferrer">Department of Civil Engineering, National Institute of Technology, Jamshedpur, India</a></p>
+            <dl class="facts">
+              <div><dt>Joined</dt><dd>July 2018</dd></div>
+              <div><dt>Dissertation</dt><dd>Geomorphological modelling of Large River Basins</dd></div>
+              <div><dt>Advisor</dt><dd><a href="https://www.researchgate.net/profile/C-Rao-2" target="_blank" rel="noopener noreferrer">Dr. Ch. Madhududana Rao</a></dd></div>
+              <div><dt>Grade</dt><dd>8.25 / 10 CGPA (credit courses)</dd></div>
+              <div><dt>Fellowship</dt><dd>Ministry of Education, Government of India</dd></div>
+            </dl>
+          </li>
+          <li>
+            <span class="period">2016 – 2018</span>
+            <h3>Master of Technology, Water Resources Engineering</h3>
+            <p class="place"><a href="https://nitmanipur.ac.in/Deptindex.aspx?page=a&amp;ItemID=s&amp;nDeptID=i" target="_blank" rel="noopener noreferrer">Department of Civil Engineering, National Institute of Technology, Manipur, India</a></p>
+            <dl class="facts">
+              <div><dt>Joined</dt><dd>July 2016</dd></div>
+              <div><dt>Thesis</dt><dd>Geospatial Technology-based Assessment on Deforestation: A case study in hilly districts of Manipur, India</dd></div>
+              <div><dt>Supervisor</dt><dd><a href="https://scholar.google.co.in/citations?user=Z3psNqsAAAAJ" target="_blank" rel="noopener noreferrer">Prof. Bakimchandra Oinam</a></dd></div>
+              <div><dt>Grade</dt><dd>8.89 / 10 CGPA</dd></div>
+              <div><dt>Fellowship</dt><dd>Ministry of Human Resource Development, Government of India</dd></div>
+            </dl>
+          </li>
+          <li>
+            <span class="period">2012 – 2016</span>
+            <h3>Bachelor of Engineering, Civil Engineering</h3>
+            <p class="place"><a href="https://www.bbit.edu.in/" target="_blank" rel="noopener noreferrer">Department of Civil Engineering, Budge Budge Institute of Technology</a>, affiliated with Maulana Abul Kalam Azad University of Technology, West Bengal</p>
+            <dl class="facts">
+              <div><dt>Project</dt><dd>Design of a Green Residential Building (G+3)</dd></div>
+              <div><dt>Grade</dt><dd>8.89 / 10 CGPA</dd></div>
+            </dl>
+          </li>
+          <li>
+            <span class="period">2012</span>
+            <h3>Class XII (Science), WBCHSE</h3>
+            <p class="place"><a href="https://navanalanda.org.in/" target="_blank" rel="noopener noreferrer">Nava Nalanda High School</a>, Kolkata, India</p>
+          </li>
+          <li>
+            <span class="period">2010</span>
+            <h3>Class X, WBBSE</h3>
+            <p class="place">Nava Nalanda High School, Kolkata, India</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section" aria-labelledby="exp-h">
+        <p class="eyebrow">Experience</p>
+        <h2 id="exp-h" class="section-title">Professional experience</h2>
+
+        <ol class="timeline compact">
+          <li><span class="period">June 2024 – present</span><h3>Research Associate II</h3><p class="place"><a href="https://sites.google.com/iiti.ac.in/cnarmada/about-cnarmada" target="_blank" rel="noopener noreferrer">Narmada River Basin Management Studies, IIT Indore</a></p></li>
+          <li><span class="period">July 2018 – June 2024</span><h3>Research Assistant</h3><p class="place"><a href="https://www.nitjsr.ac.in/departments/civil" target="_blank" rel="noopener noreferrer">Environmental Engineering Lab, NIT Jamshedpur</a></p></li>
+          <li><span class="period">February 2021</span><h3>Freelance Hydrological Modeller</h3><p class="place"><a href="https://www.freelancer.in/u/roysrija7" target="_blank" rel="noopener noreferrer">Tirella &amp; Associates, Atlanta, GA, USA</a></p></li>
+          <li><span class="period">June 2016 – June 2018</span><h3>Research Assistant</h3><p class="place"><a href="https://nitmanipur.ac.in/Deptindex.aspx?page=a&amp;ItemID=s&amp;nDeptID=i" target="_blank" rel="noopener noreferrer">Remote Sensing and GIS Lab, NIT Manipur</a></p></li>
+          <li><span class="period">May – June 2017</span><h3>Trainee</h3><p class="place"><a href="https://nesac.gov.in/" target="_blank" rel="noopener noreferrer">North Eastern Space Applications Centre (ISRO), Shillong</a></p></li>
+          <li><span class="period">June – July 2015</span><h3>Trainee</h3><p class="place"><a href="https://www.grihaindia.org/sites/default/files/sites/default/files/pdf/case-studies/coal-India-Kolkata.pdf" target="_blank" rel="noopener noreferrer">Coal India Limited, Kolkata</a></p></li>
+          <li><span class="period">December 2014 – January 2015</span><h3>Trainee</h3><p class="place"><a href="https://www.bridgeroof.co.in/" target="_blank" rel="noopener noreferrer">Bridge and Roof Co. (India) Ltd., Kolkata</a></p></li>
+        </ol>
+
+        <h3 class="sub-title">Research experience</h3>
+        <div class="accordion">
+          <details open>
+            <summary><span>Research Associate II</span><small>June 2024 – present · IIT Indore</small></summary>
+            <div class="details-body">
+              <dl class="facts">
+                <div><dt>Organisation</dt><dd><a href="https://www.iiti.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Technology, Indore, India</a></dd></div>
+                <div><dt>Project</dt><dd>Narmada River Basin Management Studies</dd></div>
+                <div><dt>Principal Investigator</dt><dd><a href="https://sites.google.com/view/mkg1/home" target="_blank" rel="noopener noreferrer">Prof. Manish Kumar Goyal</a>, Professor and Dean of Infrastructure Development, IIT Indore</dd></div>
+                <div><dt>Funded by</dt><dd><a href="https://www.jalshakti-dowr.gov.in/" target="_blank" rel="noopener noreferrer">Ministry of Jal Shakti, Government of India</a></dd></div>
+              </dl>
+              <div class="two-col">
+                <div>
+                  <h4>Technical responsibilities</h4>
+                  <ul class="bullets">
+                    <li>Conditional assessment and planning of the Narmada River Basin</li>
+                    <li>Hydrological modelling</li>
+                    <li>Hydraulic modelling</li>
+                    <li>River atlas database creation</li>
+                    <li>Geomorphological mapping and profiling</li>
+                    <li>Geological profiling</li>
+                    <li>Climate change assessment under various emission scenarios</li>
+                    <li>Infrastructure planning and mapping</li>
+                    <li>Hydrogeological assessment</li>
+                    <li>Technical report preparation</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Management and leadership</h4>
+                  <ul class="bullets">
+                    <li>Evaluation and revision of existing policies</li>
+                    <li>Stakeholder engagement and coordination</li>
+                    <li>Coordination and management of a multidisciplinary team of fourteen, comprising research scholars, field assistants, junior research fellows and project associates from environmental science, hydrology, geography, economics, biology and chemistry</li>
+                    <li>Website development for the Centre for Narmada River Basin Management Studies</li>
+                    <li>Social media management for the Centre for Narmada River Basin Management Studies</li>
+                  </ul>
+                </div>
+              </div>
+              <h4>Technical report contributions</h4>
+              <ul class="bullets">
+                <li><a href="https://sites.iitgn.ac.in/cnarmada/assets/files/Report.pdf" target="_blank" rel="noopener noreferrer">River at a Glance</a></li>
+                <li><a href="https://sites.iitgn.ac.in/cnarmada/assets/files/Lithological-Profile_Report.pdf" target="_blank" rel="noopener noreferrer">Narmada River Basin: Lithological Profile</a></li>
+                <li><a href="https://sites.iitgn.ac.in/cnarmada/assets/files/Narmada_River_Basin-Hydrology_Data_Report.pdf" target="_blank" rel="noopener noreferrer">Narmada River Basin: Hydrological Data</a></li>
+                <li><a href="https://docs.google.com/document/d/1JiNDbV3JiH4MOFbbgRdTcY9m-MJsKuRu/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Narmada River Basin: Climatologic and Meteorological Data</a></li>
+                <li>Narmada River Basin: Topographic Report</li>
+                <li>Narmada River Basin: River Atlas</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary><span>Research Assistant, Environmental Engineering Lab</span><small>2018 – 2024 · NIT Jamshedpur</small></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Mentoring graduate research projects</li>
+                <li>Preparing tutorial classes</li>
+                <li>Conducting and managing laboratory sessions for undergraduate and postgraduate students</li>
+                <li>Assisting in graduate-level lectures on Environmental Engineering</li>
+                <li>Organising workshops and hands-on training sessions</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary><span>Research Assistant, Remote Sensing and GIS Lab</span><small>2016 – 2018 · NIT Manipur</small></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Preparation of tutorials and hands-on training</li>
+                <li>Conducting and managing laboratory classes for graduate students</li>
+                <li>Assisting in graduate-level lecture sessions</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <h3 class="sub-title">Industrial experience</h3>
+        <div class="accordion">
+          <details>
+            <summary><span>Freelance Hydrological Modeller</span><small>February 2021 · 330 Eugenia apartments (Tirella &amp; Associates, Atlanta, GA, USA)</small></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Designed nature-based solutions such as bio-swales and bio-swamps so that post-construction runoff stays consistent with pre-construction levels</li>
+                <li>Planned groundwater recharge structures to enhance infiltration and reduce surface runoff</li>
+                <li>Coordinated with engineers, contractors and environmental consultants to align project goals and regulatory requirements</li>
+                <li>Prepared a detailed hydrological report covering runoff modelling, soil infiltration analysis and compliance metrics</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary><span>Trainee, North Eastern Space Applications Centre (ISRO)</span><small>May – June 2017 · Shillong</small></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Conducted a geospatial technology-based deforestation analysis of the hilly districts of Manipur, India</li>
+                <li>Compared the Maximum Likelihood Classifier and Spectral Angle Mapper for land use and land cover classification</li>
+                <li>Predicted near-future deforestation scenarios using logistic regression on explanatory variables</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary><span>Trainee, Coal India Limited</span><small>June – July 2015 · Kolkata</small></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Assisted in monitoring sustainable construction practices under green building norms for the G+4 green building of the Coal India office project</li>
+                <li>Supported site engineers in overseeing material selection, energy-efficient systems and waste management protocols during project execution</li>
+                <li>Participated in quality checks, documentation and coordination with contractors and consultants to ensure timely progress and compliance with green building standards</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary><span>Trainee, Bridge and Roof Co. (India) Ltd.</span><small>December 2014 – January 2015 · Kolkata</small></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Assisted site engineers in supervising daily construction activities for a hospital project</li>
+                <li>Coordinated with contractors and labour teams to maintain workflow efficiency, material management and site readiness</li>
+                <li>Conducted on-site quality checks and supported documentation of progress reports, measurements and compliance with construction standards</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- RESEARCH -->
+      <section id="research" class="section" aria-labelledby="res-h">
+        <p class="eyebrow">Research</p>
+        <h2 id="res-h" class="section-title">Research domains</h2>
+        <p class="lede">My work applies remote sensing, geospatial technology and machine learning to river basins, from erosion and land change to groundwater and air quality.</p>
+
+        <div class="domain-grid">
+          <article class="domain">
+            <h3>Soil erosion modelling</h3>
+            <ul class="bullets">
+              <li>Theoretical, statistical and physically based soil erosion modelling</li>
+              <li>Landslide susceptibility modelling</li>
+              <li>Quantification of river basin erosion and accretion (see the <a href="#tools">QGIS plugin</a>)</li>
+            </ul>
+            <div class="figs">
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/erosion-susceptibility.webp" alt="Map of soil erosion susceptibility across the Ganga and Godavari river basins, with very high susceptibility zones highlighted" width="617" height="439" loading="lazy"></button><figcaption>Soil erosion susceptibility in the Ganga and Godavari basins</figcaption></figure>
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/river-erosion-accretion.webp" alt="Map of the Lower Godavari river course in 1990 and 2020 with four zoomed-in areas showing bank change" width="619" height="550" loading="lazy"></button><figcaption>River course change on the Lower Godavari, 1990 vs 2020</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="domain">
+            <h3>Urbanisation impact analysis</h3>
+            <ul class="bullets">
+              <li>Remote sensing and geospatial technology based urbanisation and land use and land cover change modelling</li>
+              <li>Implementation of SVM, Random Forest and CA-ANN for urbanisation analysis and modelling</li>
+            </ul>
+            <div class="figs">
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/lulc-ca-ann.webp" alt="Six land use and land cover maps for 1990, 2000, 2010, 2020, 2030 and 2040" width="828" height="644" loading="lazy"></button><figcaption>Land use and land cover maps, 1990 to 2040</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="domain">
+            <h3>Hydrological modelling of river basins</h3>
+            <ul class="bullets">
+              <li>Geospatial technologies for large-scale streamflow analysis</li>
+              <li>Physically based hydrological modelling using SWAT</li>
+            </ul>
+            <div class="figs">
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/basin-streams.webp" alt="Elevation map of a large river basin with its drainage network overlaid" width="1100" height="691" loading="lazy"></button><figcaption>Elevation and drainage network of a large river basin</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="domain">
+            <h3>Geomorphological river basin analysis</h3>
+            <ul class="bullets">
+              <li>Geospatial technologies for geomorphological analysis of river basins</li>
+              <li>Hypsometric and morphometric characterisation of large-scale river basins</li>
+            </ul>
+            <div class="figs">
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/dem-hypsometry.webp" alt="Histograms of hypsometric integral and skewness computed from SRTM, GMTED2010 and GTOPO30 elevation data" width="1100" height="537" loading="lazy"></button><figcaption>Hypsometric integral and skewness from three DEM sources (SRTM, GMTED2010, GTOPO30)</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="domain">
+            <h3>Hydro-geologically constrained groundwater zones</h3>
+            <ul class="bullets">
+              <li>Classification of areas by depth to water level (DWL)</li>
+              <li>A methodology to delineate zones of hydro-geological constraint</li>
+            </ul>
+            <div class="figs">
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/groundwater-dwl.webp" alt="Map of depth to water level in metres below ground level across northern India with constrained groundwater zones hatched" width="766" height="606" loading="lazy"></button><figcaption>Depth to water level and hydro-geologically constrained zones</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="domain">
+            <h3>Forestry and coastal biodiversity modelling</h3>
+            <ul class="bullets">
+              <li>Environmental impact assessment</li>
+              <li>Coastal biodiversity modelling</li>
+            </ul>
+            <div class="figs">
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/deforestation-risk.webp" alt="Map of deforestation probability in three classes from 0.26 to 1, with non-deforested areas in white" width="466" height="563" loading="lazy"></button><figcaption>Deforestation probability map</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="domain">
+            <h3>Air pollution monitoring and assessment</h3>
+            <ul class="bullets">
+              <li>Aerosol and particulate matter pollution modelling</li>
+              <li>Identifying dominant sources of particulate matter pollution</li>
+            </ul>
+            <div class="figs">
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/pm-trends.webp" alt="Line charts of maximum, average and minimum PM2.5 and PM10 concentrations at three monitoring stations" width="729" height="452" loading="lazy"></button><figcaption>PM2.5 and PM10 at three monitoring stations</figcaption></figure>
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/pm25-seasonal.webp" alt="Two PM2.5 concentration maps, one for summer and one for winter" width="1100" height="356" loading="lazy"></button><figcaption>Seasonal PM2.5 surfaces, summer and winter</figcaption></figure>
+              <figure><button class="zoom" type="button" data-group="research"><img src="assets/img/research/satellite-constellation.webp" alt="Illustration of the A-Train satellite constellation orbiting Earth: Aura, PARASOL, CALIPSO, CloudSat and Aqua" width="1100" height="524" loading="lazy"></button><figcaption>Satellite constellation used for atmospheric monitoring</figcaption></figure>
+            </div>
+          </article>
+
+          <article class="domain">
+            <h3>Geostatistics</h3>
+            <ul class="bullets">
+              <li>Geostatistical analysis for river basin modelling</li>
+              <li>Spatial geostatistics analysis</li>
+            </ul>
+          </article>
+        </div>
+        <p class="note">Figures are reproduced from the author's research work.</p>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section id="publications" class="section" aria-labelledby="pub-h">
+        <p class="eyebrow">Publications</p>
+        <h2 id="pub-h" class="section-title">Publications &amp; conferences</h2>
+
+        <div class="pub-controls">
+          <div class="filters" role="group" aria-label="Filter publications by type">
+            <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter" data-filter="journal" aria-pressed="false">Journal articles</button>
+            <button type="button" class="filter" data-filter="conference" aria-pressed="false">Conference &amp; book chapters</button>
+            <button type="button" class="filter" data-filter="review" aria-pressed="false">Under review</button>
+          </div>
+          <label class="search">
+            <span class="sr-only">Search publications</span>
+            <input id="pub-search" type="search" placeholder="Search title, journal or year" autocomplete="off">
+          </label>
+        </div>
+        <p id="pub-count" class="count" aria-live="polite"></p>
+
+        <div id="pub-list" class="pub-list">
+          <article class="pub" data-type="journal" data-year="2025">
+            <div class="pub-year">2025</div>
+            <div class="pub-body">
+              <span class="pub-type">Journal article</span>
+              <h3><a href="https://doi.org/10.1007/s12145-024-01607-w" target="_blank" rel="noopener noreferrer">Assessing the impact of digital elevation model resolution on hypsometric analysis in large river Basins (India): a non-parametric statistical approach</a></h3>
+              <p class="authors"><strong>Roy, S.</strong>, Uddin, M. G., Abdelrahman, K., Fnais, M. S., &amp; Abioui, M.</p>
+              <p class="venue"><em>Earth Science Informatics</em>, 18(1), 1–21</p>
+            </div>
+            <a class="pub-action" href="https://doi.org/10.1007/s12145-024-01607-w" target="_blank" rel="noopener noreferrer">DOI</a>
+          </article>
+
+          <article class="pub" data-type="journal" data-year="2024">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <span class="pub-type">Journal article</span>
+              <h3><a href="https://doi.org/10.1016/j.asr.2024.01.009" target="_blank" rel="noopener noreferrer">Evaluation of non-stationary spatial relationship between meteorological-environmental parameters and PM2.5</a></h3>
+              <p class="authors"><strong>Roy, S.</strong>, Rao, C. M., &amp; Abioui, M.</p>
+              <p class="venue"><em>Advances in Space Research</em>, 73(8), 4106–4124</p>
+            </div>
+            <a class="pub-action" href="https://doi.org/10.1016/j.asr.2024.01.009" target="_blank" rel="noopener noreferrer">DOI</a>
+          </article>
+
+          <article class="pub" data-type="journal" data-year="2024">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <span class="pub-type">Journal article</span>
+              <h3><a href="https://doi.org/10.1080/09715010.2023.2292280" target="_blank" rel="noopener noreferrer">Enhanced morphometric analysis for soil erosion susceptibility mapping in the Godavari river basin, India: leveraging Google Earth Engine and principal component analysis</a></h3>
+              <p class="authors"><strong>Roy, S.</strong>, &amp; Chintalacheruvu, M. R.</p>
+              <p class="venue"><em>ISH Journal of Hydraulic Engineering</em>, 30(2), 228–244</p>
+            </div>
+            <a class="pub-action" href="https://doi.org/10.1080/09715010.2023.2292280" target="_blank" rel="noopener noreferrer">DOI</a>
+          </article>
+
+          <article class="pub" data-type="journal" data-year="2024">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <span class="pub-type">Journal article</span>
+              <h3><a href="https://doi.org/10.1007/s12145-023-01177-3" target="_blank" rel="noopener noreferrer">Delineating hydro-geologically constrained groundwater zones in the Himalayan River basins of India through an innovative ensemble of hypsometric analysis and machine learning algorithms</a></h3>
+              <p class="authors"><strong>Roy, S.</strong>, &amp; Chintalacheruvu, M. R.</p>
+              <p class="venue"><em>Earth Science Informatics</em>, 17(1), 501–526</p>
+            </div>
+            <a class="pub-action" href="https://doi.org/10.1007/s12145-023-01177-3" target="_blank" rel="noopener noreferrer">DOI</a>
+          </article>
+
+          <article class="pub" data-type="journal" data-year="2024">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <span class="pub-type">Journal article</span>
+              <h3><a href="https://doi.org/10.1007/s12145-023-01133-1" target="_blank" rel="noopener noreferrer">Google Earth Engine-based morphometric parameter evaluation and comparative analysis of soil erosion susceptibility using statistical and machine learning algorithms in large river basins</a></h3>
+              <p class="authors"><strong>Roy, S.</strong>, &amp; Chintalacheruvu, M. R.</p>
+              <p class="venue"><em>Earth Science Informatics</em>, 17(1), 75–97</p>
+            </div>
+            <a class="pub-action" href="https://doi.org/10.1007/s12145-023-01133-1" target="_blank" rel="noopener noreferrer">DOI</a>
+          </article>
+
+          <article class="pub" data-type="conference" data-year="2023">
+            <div class="pub-year">2023</div>
+            <div class="pub-body">
+              <span class="pub-type">Conference paper</span>
+              <h3><a href="https://doi.org/10.1007/978-981-99-4665-5_9" target="_blank" rel="noopener noreferrer">LULC dynamics study and modeling of urban land expansion using CA-ANN</a></h3>
+              <p class="authors"><strong>Roy, S.</strong>, &amp; Chintalacheruvu, M. R.</p>
+              <p class="venue">In <em>International Conference on Science, Technology and Engineering</em> (pp. 79–90). Singapore: Springer Nature Singapore. February 2023</p>
+            </div>
+            <a class="pub-action" href="https://doi.org/10.1007/978-981-99-4665-5_9" target="_blank" rel="noopener noreferrer">DOI</a>
+          </article>
+
+          <article class="pub" data-type="conference" data-year="2023">
+            <div class="pub-year">2023</div>
+            <div class="pub-body">
+              <span class="pub-type">Monograph chapter</span>
+              <h3>Assessing Long-Term Changes in the Lower Godavari River Basin Using Geo-Spatial Technology: An Analysis of River Bank Erosion and Accretion</h3>
+              <p class="authors"><strong>Roy, S.</strong>, &amp; Chintalacheruvu, M. R.</p>
+              <p class="venue"><em>Sustainable Lifestyle Approaches towards Environment and Climate Change</em>, EIACP (PC-RP) Special Issues, MINENVIS Monograph. ISSN 0972-4656</p>
+            </div>
+          </article>
+
+          <article class="pub" data-type="conference" data-year="2021">
+            <div class="pub-year">2021</div>
+            <div class="pub-body">
+              <span class="pub-type">Book chapter</span>
+              <h3><a href="https://doi.org/10.47531/MANTECH.2021.19" target="_blank" rel="noopener noreferrer">Women as Entrepreneurs: A Case Study of Ema Keithel (Woman Market) of Manipur, India</a></h3>
+              <p class="authors"><strong>Roy, S.</strong>, &amp; Rao, C. M.</p>
+              <p class="venue">In <em>Role of Women in Nation Development</em>. MANTECH Publications</p>
+            </div>
+            <a class="pub-action" href="https://doi.org/10.47531/MANTECH.2021.19" target="_blank" rel="noopener noreferrer">DOI</a>
+          </article>
+
+          <article class="pub" data-type="review" data-year="2025">
+            <div class="pub-year">2025</div>
+            <div class="pub-body">
+              <span class="pub-type review">Submitted</span>
+              <h3>Climate Extremes and Urban Risk in Indian River Basins: Regional Disparities and Emerging Trends</h3>
+              <p class="authors"><strong>Roy, S.</strong>, &amp; Goyal, M. K.</p>
+              <p class="venue"><em>Journal of Environmental Management</em></p>
+            </div>
+          </article>
+
+          <article class="pub" data-type="review" data-year="2025">
+            <div class="pub-year">2025</div>
+            <div class="pub-body">
+              <span class="pub-type review">Submitted</span>
+              <h3>RiverBankErosionAndAccretion: A QGIS Plugin to Quantify River Bank Erosion and Accretion</h3>
+              <p class="authors"><strong>Roy, S.</strong>, &amp; Goyal, M. K.</p>
+              <p class="venue"><em>Journal of Environmental Management</em></p>
+            </div>
+          </article>
+
+          <article class="pub" data-type="review" data-year="2024">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <span class="pub-type review">Under review</span>
+              <h3>A Novel Integrated Machine Learning and Decomposition Framework for Enhanced Drought Prediction</h3>
+              <p class="authors">Gogineni, A., Sharma, S., <strong>Roy, S.</strong>, Prakash, H., &amp; Kumar, P.</p>
+              <p class="venue"><em>Catena</em></p>
+            </div>
+          </article>
+
+          <article class="pub" data-type="review" data-year="">
+            <div class="pub-year">n.d.</div>
+            <div class="pub-body">
+              <span class="pub-type review">Submitted</span>
+              <h3>Mangrove deforestation and its correlation with soil erosion in coastal regions</h3>
+              <p class="authors"><strong>Roy, S.</strong>, Raj, D., Oinam, B., &amp; Roy, A.</p>
+              <p class="venue"><em>Journal of Remote Sensing</em></p>
+            </div>
+          </article>
+        </div>
+        <p id="pub-empty" class="empty" hidden>No publications match your search. <button type="button" class="text-btn" id="pub-reset">Clear filters</button></p>
+
+        <div class="two-col lists">
+          <div>
+            <h3 class="sub-title">Conferences</h3>
+            <ul class="bullets">
+              <li>Role of Women in Nation Development (NCRWND-2020), international conference highlighting women's contribution to societal progress</li>
+              <li>1st International Conference on Science, Technology, and Engineering (ICSTE-23), 17–18 February 2023, NIT Manipur</li>
+              <li>HYDRO 2024 International, a global forum for hydropower and water resource professionals</li>
+              <li>American Geophysical Union (AGU) Fall Meeting 2024, Washington, D.C., USA</li>
+              <li>Copernicus Meetings, European Geosciences Union (EGU) General Assembly 2025, Vienna, Austria</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="sub-title">Workshops organised</h3>
+            <ul class="bullets">
+              <li>Narmada River Basin Management: Issues and Challenges, 14 July 2024</li>
+              <li>Hydro-meteorological Data with Standards, 11 December 2024</li>
+              <li>Standards in Measuring Water Quality, 4 January 2025</li>
+              <li>Narmada River Basin Management Studies, 16–17 January 2025</li>
+              <li>Sustainable Water Management: Policy, Technology, and Climate Resilience, 22 March 2025</li>
+              <li>Policy Frameworks for Sustainable Development and Integrated Approaches to Narmada River Basin Management, 29 May 2025</li>
+              <li>SERB High-End Workshop (KARYASHALA) on Concepts and Applications of GIS, Remote Sensing, and Global Navigation Satellite Systems, 10–16 July 2023, NIT Jamshedpur</li>
+            </ul>
+            <h3 class="sub-title">Workshops and programmes attended</h3>
+            <ul class="bullets">
+              <li>SERB High-End Workshop (KARYASHALA) on Challenges in Water-related Disaster Risk Reduction: Vulnerability, Adaptation, and Resilience Techniques, 16–21 January 2023, National Institute of Hydrology, Roorkee (Western Himalayan Regional Centre, Jammu), Department of WR, RD &amp; GR, Ministry of Jal Shakti, Government of India</li>
+              <li>Advanced Management Program on General Management, 22–26 March 2023, NIT Jamshedpur, sponsored by the Ministry of Micro, Small and Medium Enterprises, Government of India</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOLS -->
+      <section id="tools" class="section" aria-labelledby="tools-h">
+        <p class="eyebrow">Tools &amp; applications</p>
+        <h2 id="tools-h" class="section-title">Open-source tools &amp; deployed applications</h2>
+
+        <div class="tool-grid">
+          <!-- TODO: add the live app URL to each Google Earth Engine tool below as an <a class="btn btn-small"> link. -->
+          <article class="tool">
+            <h3>Urban Water Quality Analyzer</h3>
+            <p class="stack">Python · Google Earth Engine</p>
+            <p>Cloud-native application for multi-temporal assessment of urban surface water quality using satellite data. Designed for scalable, high-resolution monitoring of urban water bodies.</p>
+          </article>
+          <article class="tool">
+            <h3>Riparian Zone Delineation &amp; Condition Assessment Tool</h3>
+            <p class="stack">Python · Google Earth Engine</p>
+            <p>Automated satellite-based framework for riparian extent mapping and ecological condition assessment.</p>
+            <p class="badge">Patent filed: 202521130273</p>
+          </article>
+          <article class="tool">
+            <h3>LULC Classification &amp; Training Sample Generator</h3>
+            <p class="stack">Python · Google Earth Engine</p>
+            <p>End-to-end automated workflow for long-term land use and land cover classification from multi-temporal satellite imagery, including training data generation.</p>
+          </article>
+          <article class="tool">
+            <h3>Earth Observation Data Extraction &amp; Analysis Tool</h3>
+            <p class="stack">Python · Google Earth Engine</p>
+            <p>Scalable framework for extracting, processing and analysing multi-source Earth observation datasets for environmental and hydrological studies.</p>
+          </article>
+          <article class="tool">
+            <h3>Long-Term Deforestation &amp; High-Risk Forest Identification Tool</h3>
+            <p class="stack">Python · Google Earth Engine</p>
+            <p>Hansen dataset-based analytical tool for detecting long-term deforestation trends and identifying high-risk forest types across large spatial extents.</p>
+          </article>
+          <article class="tool">
+            <h3>ShorelineDetect</h3>
+            <p class="stack">Python · Google Earth Engine</p>
+            <p>Google Earth Engine–based application for long-term shoreline change detection and coastal dynamics analysis.</p>
+            <p class="badge">Presented at AGU Ocean Sciences Meeting 2026</p>
+            <a class="btn btn-small" href="https://github.com/roysrija/ShorelineDetect" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </article>
+          <article class="tool tool-wide">
+            <div class="tool-text">
+              <h3>RiverBankErosionAndAccretion QGIS Plugin</h3>
+              <p class="stack">Python · QGIS</p>
+              <p>Open-source QGIS plugin for quantifying river bank erosion and accretion using multi-temporal geospatial datasets. It maps and classifies erosion and accretion zones from multi-year spatial data.</p>
+              <p class="badge">Manuscript submitted to <em>Journal of Environmental Management</em></p>
+              <a class="btn btn-small" href="https://github.com/roysrija/RiverBankErosionAccretionV2" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </div>
+            <figure class="tool-fig"><button class="zoom" type="button" data-group="research"><img src="assets/img/research/qgis-plugin.webp" alt="Screenshot of the RiverBankErosionAndAccretion plugin page in the QGIS plugin repository" width="1100" height="536" loading="lazy"></button></figure>
+          </article>
+        </div>
+      </section>
+
+      <!-- AWARDS -->
+      <section id="awards" class="section" aria-labelledby="awards-h">
+        <p class="eyebrow">Awards</p>
+        <h2 id="awards-h" class="section-title">Awards &amp; recognition</h2>
+        <ol class="award-list">
+          <li><span class="award-year">2026</span><div><h3>Seal of Excellence</h3><p>Horizon Europe, MSCA Postdoctoral Fellowships 2025. Awarded by the European Commission.</p></div></li>
+          <li><span class="award-year">2025</span><div><h3>Jal Vigyan Puraskar</h3><p>Best Paper Award, <em>ISH Journal of Hydraulic Engineering</em>. Indian Society for Hydraulics, India.</p></div></li>
+          <li><span class="award-year">2025</span><div><h3>International Travel Support Grant</h3><p>Awarded by the Anusandhan National Research Foundation, Government of India, for presenting research at the EGU General Assembly, Vienna, Austria.</p></div></li>
+          <li><span class="award-year">2021</span><div><h3>Research Scholar of the Year Award</h3><p>Research Conclave, National Institute of Technology Jamshedpur, India.</p></div></li>
+          <li><span class="award-year">2017</span><div><h3>Winner, “Mapping the World through GIS” competition</h3><p>Awarded an internship at the North Eastern Space Applications Centre (ISRO). Project: remote sensing and GIS-based land use/land cover change analysis in Tamenglong and Churachandpur districts, Manipur, India. National Institute of Technology Manipur and North Eastern Space Applications Centre, India.</p></div></li>
+          <li><span class="award-year">2017</span><div><h3>GIS Day Award, first prize</h3><p>“Discovering the World through GIS”, National Institute of Technology Manipur, India.</p></div></li>
+          <li><span class="award-year">2016</span><div><h3>Higher Education Scholarship</h3><p>Awarded by the Ministry of Education, Government of India, for ranking in the top 1% among 118,147 students nationally.</p></div></li>
+          <li><span class="award-year">2016</span><div><h3>Silver Medal (second rank), B.Tech. Civil Engineering</h3><p>Budge Budge Institute of Technology, West Bengal, India.</p></div></li>
+        </ol>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" class="section" aria-labelledby="cert-h">
+        <p class="eyebrow">Certifications</p>
+        <h2 id="cert-h" class="section-title">Certifications &amp; courses</h2>
+        <div class="accordion">
+          <details open>
+            <summary><span>NASA (National Aeronautics and Space Administration)</span><small>13 certificates, 2022 – 2025</small></summary>
+            <div class="details-body">
+              <ul class="cert-list">
+                <li><strong>The Application of Earth Observations for Assessing Waterborne Disease Risk</strong><span>25 and 27 March 2025</span></li>
+                <li><strong>Calculating Spectral Indices for Land and Aquatic Applications Using QGIS</strong><span>27 February 2025</span></li>
+                <li><strong>Overview of SeaDAS 8.4.1 for the Processing, Analysis and Visualisation of Optical Remote Sensing Data for Water Quality Monitoring</strong><span>13 February 2024</span></li>
+                <li><strong>Spectral Indices for Land and Aquatic Applications</strong><span>26th, 2nd and 9th November 2023</span></li>
+                <li><strong>Transforming Earth Observation (EO) Data into Building Infrastructure Data Sets for Disaster Risk Modeling</strong><span>3rd, 5th and 10th October 2023</span></li>
+                <li><strong>Transforming Earth Observation (EO) Data into Building Infrastructure Data Sets for Disaster Risk Modeling</strong><span>3rd, 5th and 10th September 2023</span></li>
+                <li><strong>Building Climate Risk Assessments from Local Vulnerability and Exposure</strong><span>19th and 21st September 2023</span></li>
+                <li><strong>Application of NASA SPoRT-Land Information System (SPoRT-LIS) Soil Moisture Data for Drought</strong><span>17th, 24th and 31st May 2023</span></li>
+                <li><strong>Connecting Citizen Science with Remote Sensing</strong><span>24th, 26th and 31st January 2023</span></li>
+                <li><strong>Disaster Assessment Using Synthetic Aperture Radar</strong><span>19th, 20th and 27th October 2022</span></li>
+                <li><strong>Accessing and Analysing Air Quality Data from Geo-stationary Satellites</strong><span>11th, 18th and 25th October 2022</span></li>
+                <li><strong>Monitoring and Modeling Floods using Earth Observations</strong><span>14th and 21st September 2022</span></li>
+                <li><strong>Fundamentals of Machine Learning for Earth Science</strong><span>20th, 27th and 4th May 2022</span></li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary><span>Esri (Environmental Systems Research Institute, Inc.)</span><small>5 courses, 2020 – 2023</small></summary>
+            <div class="details-body">
+              <ul class="cert-list">
+                <li><strong>GIS for Climate Action</strong><span>6 weeks, completed 7 December 2023</span></li>
+                <li><strong>Going Places with Spatial Analysis</strong><span>6 weeks, completed 15 March 2023</span></li>
+                <li><strong>Imagery in Action</strong><span>6 weeks, completed 24 September 2021</span></li>
+                <li><strong>Spatial Data Science: The New Frontier in Analytics</strong><span>6 weeks, completed 4 December 2020</span></li>
+                <li><strong>Python for Everyone</strong><span>6 October 2020</span></li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary><span>ISRO, workshops and online courses</span><small>4 certificates, 2016 – 2021</small></summary>
+            <div class="details-body">
+              <ul class="cert-list">
+                <li><strong>Geo-spatial Technology for Archaeological Studies</strong><span>Indian Space Research Organisation (ISRO), 17–21 May 2021</span></li>
+                <li><strong>Arc-SWAT Model with ArcGIS: run for any study area</strong><span>Udemy online course, 26 November 2020</span></li>
+                <li><strong>Advance Technologies in Water Resources Management</strong><span>GCE Aurangabad, with the Indian Water Resources Society and the Indian Society for Hydraulics, 23–27 November 2020</span></li>
+                <li><strong>Awareness Program on the Potential of Space Technology and its Applications</strong><span>One-day workshop, NIT Manipur and North Eastern Space Applications Centre (ISRO), 27 September 2016</span></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ENGAGEMENT -->
+      <section id="engagement" class="section" aria-labelledby="eng-h">
+        <p class="eyebrow">Engagement</p>
+        <h2 id="eng-h" class="section-title">Community &amp; academic engagement</h2>
+        <p class="lede">Moments from workshops, poster sessions and conferences. Select a photo to enlarge it.</p>
+        <div class="gallery">
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g01.webp" alt="Welcome to the EGU General Assembly 2025 sign at the venue entrance in Vienna" width="1000" height="750" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g02.webp" alt="Standing beside a large poster titled Narmada River at a Glance" width="960" height="1280" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g03.webp" alt="Holding up a framed award plaque on a balcony" width="604" height="453" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g04.webp" alt="Receiving a certificate in a meeting room" width="1000" height="472" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g05.webp" alt="Discussing research posters with colleagues" width="1000" height="751" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g06.webp" alt="Visitors gathered around a research poster" width="1000" height="751" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g07.webp" alt="Presenting at the IIT Indore podium with climate trend slides on screen" width="1000" height="562" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g08.webp" alt="Speaking at the podium during a river basin management presentation" width="1000" height="750" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g09.webp" alt="Workshop hall with a speaker at the podium and slides on screen" width="1000" height="750" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g10.webp" alt="Audience watching a presentation at a workshop" width="1000" height="750" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g11.webp" alt="Participants seated in a seminar room during a session" width="960" height="1280" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g12.webp" alt="Exchanging a memento on stage at IIT Indore" width="720" height="961" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g13.webp" alt="Group photograph of workshop participants on the steps of a building" width="1000" height="562" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g14.webp" alt="Group photograph of workshop participants in front of a banner" width="1000" height="750" loading="lazy"></button></figure>
+          <figure><button class="zoom" type="button" data-group="gallery"><img src="assets/img/gallery/g15.webp" alt="Large group photograph of workshop participants at the building entrance" width="1000" height="750" loading="lazy"></button></figure>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact" aria-labelledby="contact-h">
+        <p class="eyebrow light">Contact</p>
+        <h2 id="contact-h">Let's connect</h2>
+        <p>I am happy to talk about river basin research, remote sensing and GIS, collaborations and postdoctoral opportunities.</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:roysrija7@gmail.com">roysrija7@gmail.com</a></li>
+          <li><span>Institute email</span><a href="mailto:srijaroy@iiti.ac.in">srijaroy@iiti.ac.in</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/srija-roy-746bb9100" target="_blank" rel="noopener noreferrer">linkedin.com/in/srija-roy-746bb9100</a></li>
+          <li><span>ResearchGate</span><a href="https://www.researchgate.net/profile/Srija-Roy-3" target="_blank" rel="noopener noreferrer">researchgate.net/profile/Srija-Roy-3</a></li>
+          <li><span>GitHub</span><a href="https://github.com/roysrija" target="_blank" rel="noopener noreferrer">github.com/roysrija</a></li>
+        </ul>
+        <p class="address">Department of Civil Engineering, Indian Institute of Technology, Indore, India</p>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 Srija Roy. All rights reserved.</span>
+        <span>Last updated October 2026</span>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <dialog id="lightbox" class="lightbox" aria-labelledby="lb-caption">
+    <button class="lb-close" type="button" aria-label="Close image">×</button>
+    <button class="lb-nav lb-prev" type="button" aria-label="Previous image">‹</button>
+    <figure>
+      <img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" type="button" aria-label="Next image">›</button>
+  </dialog>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
