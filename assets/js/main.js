@@ -10,14 +10,12 @@
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
 
   /* ---------- Theme (light / dark) ---------- */
-  var darkQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
   var MOON = 'M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z';
   var SUN = 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4';
 
   function currentTheme() {
-    var set = root.getAttribute('data-theme');
-    if (set === 'dark' || set === 'light') return set;
-    return darkQuery && darkQuery.matches ? 'dark' : 'light';
+    /* bright is the default for everyone; dark only after the visitor chooses it */
+    return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
   }
   function syncThemeUi() {
     var dark = currentTheme() === 'dark';
