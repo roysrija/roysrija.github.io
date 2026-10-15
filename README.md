@@ -33,6 +33,8 @@ python3 -m http.server 8000
 - **Change fonts:** headings use Newsreader and body text uses Source Sans 3, both self-hosted from `assets/fonts/` (SIL Open Font License; see `assets/fonts/LICENSES.md`). To swap them, add new `.woff2` files, declare them in the "Fonts" block at the top of `style.css`, and change `--serif` and `--sans`.
 - **Change colours:** the site ships with five ready-made palettes (`teal`, `forest`, `indigo`, `terracotta`, `burgundy`) at the top of `style.css`. Midnight Indigo (`indigo`) is the default and needs no attribute. To switch, set `data-palette="forest"` (or another name) on the `<html>` tag in `index.html`. To try them first, open the site with `?preview` added to the address (for example `https://roysrija.github.io/?preview`), which shows a small panel for switching palettes. Each palette defines light values (`--p*`) and dark values (`--d-*`). The top bar, headings and accent bars are derived from them (`--bar`, `--heading`).
 - **Add or reorder a navigation item:** edit the `<nav class="nav">` block in `index.html` (the `More` dropdown holds the last-priority items) and give the matching `<section>` the same `id`.
+- **Light and dark:** the site always opens in the bright theme. Visitors can switch to dark with the toggle in the top bar, and the choice is remembered in their browser.
+- **After changing CSS or JS:** bump the `?v=` number on the `style.css` and `main.js` links in `index.html` and `404.html` (currently `20261015a`). GitHub Pages lets browsers cache files for about 10 minutes, and a new number makes them fetch the update immediately.
 - **Update "Last updated":** edit the footer in `index.html` and `lastmod` in `sitemap.xml`.
 
 ## Deploy

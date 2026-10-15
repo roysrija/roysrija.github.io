@@ -61,7 +61,7 @@
   --d-sand: #2b2415; --d-sandink: #e3c48a;
 }
 
-/* ---------- Theme tokens (light / dark) ---------- */
+/* ---------- Theme tokens (light by default; dark only when the visitor presses the toggle) ---------- */
 :root {
   --bg: #ffffff; --bg-soft: var(--p-soft); --card: #ffffff;
   --ink: var(--p-ink); --muted: var(--p-muted); --line: var(--p-line);
@@ -89,19 +89,6 @@
   --heading: var(--d-ink); --hero-wash: linear-gradient(180deg, var(--d-soft) 0%, var(--d-bg) 94%); --contour: var(--d-p);
   --shadow: 0 8px 24px rgba(0, 0, 0, .38);
   color-scheme: dark;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: var(--d-bg); --bg-soft: var(--d-soft); --card: var(--d-card);
-    --ink: var(--d-ink); --muted: var(--d-muted); --line: var(--d-line);
-    --water: var(--d-p); --water-deep: var(--d-tint); --water-tint: var(--d-tint); --leaf: var(--d-accent);
-    --sand: var(--d-sand); --sand-ink: var(--d-sandink);
-    --on-water: var(--d-bg); --btn-hover-bg: color-mix(in srgb, var(--d-p) 78%, #fff); --btn-hover-ink: var(--d-bg);
-    --bar: var(--d-tint); --bar-deep: var(--d-soft); --on-bar: var(--d-ink); --on-bar-muted: var(--d-muted);
-    --heading: var(--d-ink); --hero-wash: linear-gradient(180deg, var(--d-soft) 0%, var(--d-bg) 94%); --contour: var(--d-p);
-    --shadow: 0 8px 24px rgba(0, 0, 0, .38);
-    color-scheme: dark;
-  }
 }
 
 /* ---------- Base ---------- */
