@@ -42,12 +42,13 @@
   });
   syncThemeUi();
 
-  /* ---------- External links: announce new tab to screen readers ---------- */
+  /* ---------- External links: announce new tab to screen readers ----------
+     Done with aria-label (visible text first, so it still matches the label)
+     rather than hidden text, which would be copied along with the page text. */
   $$('a[target="_blank"]').forEach(function (a) {
-    var hint = document.createElement('span');
-    hint.className = 'sr-only';
-    hint.textContent = ' (opens in a new tab)';
-    a.appendChild(hint);
+    var label = (a.getAttribute('aria-label') || a.textContent).replace(/\s+/g, ' ').trim();
+    if (!label) return;
+    a.setAttribute('aria-label', label + ' (opens in a new tab)');
   });
 
   /* ---------- Top bar: mobile menu + "More" dropdown ---------- */
